@@ -43,7 +43,7 @@
         bindings =
             <&kp LC(X)>,
             <&kp LC(C)>,
-            <&kp LC(A))>,
+            <&kp LC(A)>,
             <&kp LC(V)>;
 
         tick = <10>;
