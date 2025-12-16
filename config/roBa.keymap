@@ -12,17 +12,17 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-    // arrows {
-    //     layers = <3>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
+     window {
+         layers = <3>;
+         bindings =
+             <&kp LG(RIGHT_ARROW)>,
+             <&kp LG(LEFT_ARROW)>,
+             <&kp LG(UP_ARROW)>,
+             <&kp LG(DOWN_ARROW)>;
+         tick = <10>;
+         wait-ms = <5>;
+         tap-ms = <5>;
+     };
 };
 
 / {
