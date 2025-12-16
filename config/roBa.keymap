@@ -12,17 +12,18 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-     window {
-         layers = <3>;
-         bindings =
-             <&kp LG(RIGHT_ARROW)>,
-             <&kp LG(LEFT_ARROW)>,
-             <&kp LG(UP_ARROW)>,
-             <&kp LG(DOWN_ARROW)>;
-         tick = <10>;
-         wait-ms = <5>;
-         tap-ms = <5>;
-     };
+    window {
+        layers = <3>;
+        bindings =
+            <&kp LG(RIGHT_ARROW)>,
+            <&kp LG(LEFT_ARROW)>,
+            <&kp LG(UP_ARROW)>,
+            <&kp LG(DOWN_ARROW)>;
+
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
 };
 
 / {
@@ -85,10 +86,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &trans             &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE          &kp BACKSPACE  &lt 4 ENTER                             &lt 3 TILDE
+&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &lt 5 I      &kp O    &kp P
+&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K        &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &trans             &kp SEMICOLON  &kp N        &kp M  &lt 3 COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE          &kp BACKSPACE  &lt 5 ENTER                               &lt 3 TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
@@ -134,10 +135,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7  &kp F8     &kp F9          &kp F10
+&kp F11  &kp F12  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans     &kp LS(LC(N5))  &trans
+&trans   &trans   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LC(N)  &kp LS(LC(N7))  &kp LS(LC(R))
+&trans   &trans   &trans  &trans  &trans  &trans      &trans  &trans                                     &trans
             >;
         };
 
