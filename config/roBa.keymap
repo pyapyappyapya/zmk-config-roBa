@@ -13,12 +13,38 @@
     scroll-layers = <5>;
 
     window {
-        layers = <3>;
+        layers = <8>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
             <&kp LG(LEFT_ARROW)>,
             <&kp LG(UP_ARROW)>,
             <&kp LG(DOWN_ARROW)>;
+
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    desktop {
+        layers = <9>;
+        bindings =
+            <&kp LC(LS(F2))>,
+            <&kp LC(LS(F1))>,
+            <&kp LC(LS(F3))>,
+            <&kp LC(LS(F4))>;
+
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    copypaste {
+        layers = <10>;
+        bindings =
+            <&kp LC(X)>,
+            <&kp LC(C)>,
+            <&trans)>,
+            <&kp LC(V)>;
 
         tick = <10>;
         wait-ms = <5>;
