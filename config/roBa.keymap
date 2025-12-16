@@ -14,7 +14,6 @@
 
     window {
         layers = <8>;
-        consume-input;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
             <&kp LG(LEFT_ARROW)>,
@@ -28,7 +27,6 @@
 
     desktop {
         layers = <9>;
-        consume-input;
         bindings =
             <&kp LC(LS(F2))>,
             <&kp LC(LS(F1))>,
@@ -42,7 +40,6 @@
 
     copypaste {
         layers = <10>;
-        consume-input;
         bindings = <&kp LC(X)>, <&kp LC(C)>, <&kp LC(A)>, <&kp LC(V)>;
 
         tick = <10>;
