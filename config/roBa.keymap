@@ -85,21 +85,21 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &trans             &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE          &kp BACKSPACE  &lt 4 ENTER                             &lt 3 TILDE
+&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &kp I      &kp O    &lt 8 P
+&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &lt 9 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &trans             &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 10 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE          &kp BACKSPACE  &lt 5 ENTER                             &kp TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
-        num,excel {
+        num_arrow {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6  &kp N7  &kp N8        &kp N9        &kp N0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans        &kp LC(HOME)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LC(HOME)  &kp LC(HOME)  &kp LC(HOME)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                      &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6  &kp N7  &kp N8          &kp N9          &kp N0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                          &trans
             >;
         };
 
@@ -112,12 +112,12 @@
             >;
         };
 
-        arrow,tenkey {
+        tenkey_excel {
             bindings = <
-&kp KP_NUMBER_1  &kp LC(LS(KP_NUMBER_2))  &kp KP_NUMBER_3  &trans           &trans                                      &trans     &trans  &trans          &trans          &trans
-&kp KP_NUMBER_4  &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS  &trans         &trans         &trans     &trans  &trans          &kp UP_ARROW    &trans
-&kp KP_NUMBER_7  &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp KP_SLASH  &trans         &trans         &trans     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
-&trans           &kp KP_NUMBER_0          &kp KP_DOT       &kp KP_EQUAL     &tog 3        &kp ENTER      &kp BACKSPACE  &kp ENTER                                          &trans
+&kp KP_NUMBER_1  &kp LC(LS(KP_NUMBER_2))  &kp KP_NUMBER_3  &trans           &trans                                      &trans     &trans  &trans               &trans            &trans
+&kp KP_NUMBER_4  &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS  &trans         &trans         &trans     &trans  &trans               &kp LS(LC(HOME))  &trans
+&kp KP_NUMBER_7  &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp KP_SLASH  &trans         &trans         &trans     &trans  &kp LS(LC(PAGE_UP))  &trans            &kp LS(LC(PAGE_DOWN))
+&trans           &kp KP_NUMBER_0          &kp KP_DOT       &kp KP_EQUAL     &tog 3        &kp ENTER      &kp BACKSPACE  &kp ENTER                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -125,10 +125,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
@@ -141,12 +141,48 @@
             >;
         };
 
-        layer_6 {
+        bluetooth {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        funktion {
+            bindings = <
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7  &kp F8     &kp F9          &kp F10
+&kp F11  &kp F12  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans     &kp LS(LC(N5))  &trans
+&trans   &trans   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LC(N)  &kp LS(LC(N7))  &kp LS(LC(R))
+&trans   &trans   &trans  &trans  &trans  &trans      &trans  &trans                                     &trans
+            >;
+        };
+
+        gesture_window {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        gesture_desktop {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        gesture_copypaste {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
