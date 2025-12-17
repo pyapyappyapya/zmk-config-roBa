@@ -122,6 +122,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
+                <&macro_wait_ms 250>, 
                 <&sl 4>;
 
             label = "MKP_EXIT_AML";
