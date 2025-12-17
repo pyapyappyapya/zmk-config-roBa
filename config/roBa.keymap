@@ -97,6 +97,11 @@
             bindings = <&mo 10>;
             key-positions = <32 33>;
         };
+
+        middlebutton {
+            bindings = <&lt 5 LS(LG(S))>;
+            key-positions = <18 19>;
+        };
     };
 
     macros {
