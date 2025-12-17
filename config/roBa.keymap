@@ -10,6 +10,7 @@
 
 &trackball {
     // automouse-layer = <4>;
+
     scroll-layers = <5>;
 
     window {
@@ -82,9 +83,19 @@
             key-positions = <39 40>;
         };
 
-        scroll {
-            bindings = <&mo 5>;
-            key-positions = <7 8>;
+        to_L8 {
+            bindings = <&lt 8 LG(LC(RIGHT))>;
+            key-positions = <8 9>;
+        };
+
+        to_L9 {
+            bindings = <&mo 9>;
+            key-positions = <20 21>;
+        };
+
+        to_L10 {
+            bindings = <&mo 10>;
+            key-positions = <32 33>;
         };
     };
 
@@ -113,9 +124,9 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &kp I      &kp O    &lt 8 P
-&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &lt 9 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &trans             &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 10 SLASH
+&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &kp I      &kp O    &kp P
+&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &trans             &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE          &kp BACKSPACE  &lt 5 ENTER                             &kp TILDE
             >;
 
