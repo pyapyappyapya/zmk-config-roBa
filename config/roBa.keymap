@@ -24,7 +24,6 @@
         tick = <10>;
         wait-ms = <500>;
         tap-ms = <5>;
-        continuous_key_press = <false>;
     };
 
     desktop {
@@ -38,7 +37,6 @@
         tick = <10>;
         wait-ms = <500>;
         tap-ms = <5>;
-        continuous_key_press = <false>;
     };
 
     copypaste {
@@ -48,7 +46,6 @@
         tick = <10>;
         wait-ms = <500>;
         tap-ms = <5>;
-        continuous_key_press = <false>;
     };
 };
 
