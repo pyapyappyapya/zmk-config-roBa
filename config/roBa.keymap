@@ -125,7 +125,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE               &kp BACKSPACE  &lt 4 ENTER                             &kp TILDE
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         num_arrow {
@@ -153,8 +153,6 @@
 &kp KP_NUMBER_7  &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp KP_SLASH  &trans         &trans         &trans     &trans  &kp LS(LC(PAGE_UP))  &trans            &kp LS(LC(PAGE_DOWN))
 &trans           &kp KP_NUMBER_0          &kp KP_DOT       &kp KP_EQUAL     &tog 3        &kp ENTER      &kp BACKSPACE  &kp ENTER                                                 &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE_funktion {
