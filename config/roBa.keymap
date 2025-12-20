@@ -21,8 +21,8 @@
             <&kp LG(UP_ARROW)>,
             <&kp LG(DOWN_ARROW)>;
 
-        tick = <10>;
-        wait-ms = <500>;
+        tick = <40000>;
+        wait-ms = <5>;
         tap-ms = <5>;
     };
 
@@ -34,8 +34,8 @@
             <&kp LC(LS(F3))>,
             <&kp LC(LS(F4))>;
 
-        tick = <10>;
-        wait-ms = <500>;
+        tick = <40000>;
+        wait-ms = <5>;
         tap-ms = <5>;
     };
 
@@ -43,8 +43,8 @@
         layers = <10>;
         bindings = <&kp LC(X)>, <&kp LC(C)>, <&kp LC(A)>, <&kp LC(V)>;
 
-        tick = <10>;
-        wait-ms = <500>;
+        tick = <40000>;
+        wait-ms = <5>;
         tap-ms = <5>;
     };
 };
