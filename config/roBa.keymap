@@ -79,12 +79,12 @@
         };
 
         to_L10 {
-            bindings = <&mo 10>;
+            bindings = <&lt 10 LS(LG(S))>;
             key-positions = <32 33>;
         };
 
         middlebutton {
-            bindings = <&kp LS(LG(S))>;
+            bindings = <&mkp MB3>;
             key-positions = <18 19>;
         };
 
