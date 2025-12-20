@@ -83,11 +83,6 @@
             key-positions = <32 33>;
         };
 
-        middlebutton {
-            bindings = <&mkp MB3>;
-            key-positions = <18 19>;
-        };
-
         mb_for_drug {
             bindings = <&mkp MB1>;
             key-positions = <19 20>;
