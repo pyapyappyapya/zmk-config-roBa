@@ -22,7 +22,7 @@
             <&kp LG(DOWN_ARROW)>;
 
         tick = <10>;
-        wait-ms = <5>;
+        wait-ms = <500>;
         tap-ms = <5>;
     };
 
@@ -35,7 +35,7 @@
             <&kp LC(LS(F4))>;
 
         tick = <10>;
-        wait-ms = <5>;
+        wait-ms = <500>;
         tap-ms = <5>;
     };
 
@@ -44,7 +44,7 @@
         bindings = <&kp LC(X)>, <&kp LC(C)>, <&kp LC(A)>, <&kp LC(V)>;
 
         tick = <10>;
-        wait-ms = <5>;
+        wait-ms = <500>;
         tap-ms = <5>;
     };
 };
