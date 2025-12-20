@@ -63,11 +63,6 @@
             key-positions = <10 11>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
         bluetooth {
             bindings = <&mo 6>;
             key-positions = <39 40>;
@@ -130,7 +125,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE               &kp BACKSPACE  &lt 4 ENTER                             &kp TILDE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         num_arrow {
