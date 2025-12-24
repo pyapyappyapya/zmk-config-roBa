@@ -79,7 +79,7 @@
         };
 
         to_L10 {
-            bindings = <&lt 10 LS(LG(S))>;
+            bindings = <&mo 10>;
             key-positions = <32 33>;
         };
 
@@ -107,6 +107,25 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        td_lang: td_lang {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LANG";
+            #binding-cells = <0>;
+            bindings = <&lt 1 LANGUAGE_2>, <&kp LANGUAGE_1>;
+
+            tapping-term-ms = <250>;
+        };
+
+        lt_layer: lt_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LAYER";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&tog>;
+
+            tapping-term-ms = <250>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -114,10 +133,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &lt 5 P
-&lt 2 A           &kp S         &kp D         &kp F             &kp G             &kp LS(LG(C_MUTE))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B             &kp ESCAPE              &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 3 LANGUAGE_1  &kp SPACE               &kp BACKSPACE  &lt 4 ENTER                             &kp TILDE
+&kp Q             &kp W         &kp E         &kp R     &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 5 P
+&lt 2 A           &kp S         &kp D         &kp F     &kp G          &kp LS(LG(C_MUTE))      &kp HOME       &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B          &kp PRINTSCREEN         &kp END        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt_layer 3 3  &kp SPACE               &kp BACKSPACE  &lt 4 ENTER                             &lt 1 TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -125,28 +144,28 @@
 
         num_arrow {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6  &kp N7  &kp N8          &kp N9          &kp N0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                          &trans
+&kp N1  &kp N2  &kp N3  &kp N4         &kp N5                         &kp N6     &kp N7   &kp N8          &kp N9          &kp N0
+&trans  &trans  &trans  &kp SEMICOLON  &kp MINUS  &trans      &trans  &kp EQUAL  &kp SQT  &trans          &kp UP_ARROW    &trans
+&trans  &trans  &trans  &trans         &trans     &trans      &trans  &trans     &trans   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&trans  &trans  &trans  &trans         &trans     &trans      &trans  &trans                                              &trans
             >;
         };
 
         symbol {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                         &kp LCTRL  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans           &trans       &trans    &trans      &trans       &trans      &kp PLUS   &trans     &trans         &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans           &trans       &trans    &trans      &trans       &trans      &kp COLON  &trans     &trans         &trans        &trans                &trans
-&trans           &trans       &trans    &trans      &trans       &trans      &trans     &trans                                                        &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                         &kp LCTRL  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans           &trans       &trans    &kp COLON   &kp UNDERSCORE  &trans      &trans  &kp PLUS   &kp DOUBLE_QUOTES  &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans           &trans       &trans    &trans      &trans          &trans      &trans  &trans     &trans             &trans        &trans                &trans
+&trans           &trans       &trans    &trans      &trans          &trans      &trans  &trans                                                            &trans
             >;
         };
 
         tenkey_excel {
             bindings = <
-&kp KP_NUMBER_1  &kp LC(LS(KP_NUMBER_2))  &kp KP_NUMBER_3  &trans           &trans                                      &trans     &trans  &trans               &trans            &trans
-&kp KP_NUMBER_4  &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS  &trans         &trans         &trans     &trans  &trans               &kp LS(LC(HOME))  &trans
-&kp KP_NUMBER_7  &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp KP_SLASH  &trans         &trans         &trans     &trans  &kp LS(LC(PAGE_UP))  &trans            &kp LS(LC(PAGE_DOWN))
-&trans           &kp KP_NUMBER_0          &kp KP_DOT       &kp KP_EQUAL     &trans        &kp ENTER      &kp BACKSPACE  &kp ENTER                                                 &trans
+&kp KP_NUMBER_1  &kp LC(LS(KP_NUMBER_2))  &kp KP_NUMBER_3  &trans           &trans                                      &trans     &trans  &trans           &trans        &trans
+&kp KP_NUMBER_4  &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS  &trans         &trans         &trans     &trans  &trans           &kp LC(HOME)  &trans
+&kp KP_NUMBER_7  &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp KP_SLASH  &trans         &trans         &trans     &trans  &kp LC(PAGE_UP)  &kp LC(END)   &kp LC(PAGE_DOWN)
+&trans           &kp KP_NUMBER_0          &kp KP_DOT       &kp KP_EQUAL     &trans        &kp ENTER      &kp BACKSPACE  &kp ENTER                                         &trans
             >;
         };
 
