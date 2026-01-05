@@ -114,7 +114,7 @@
             #binding-cells = <0>;
             bindings = <&lt 1 LANGUAGE_2>, <&kp LANGUAGE_1>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         lt_layer: lt_layer {
@@ -123,7 +123,7 @@
             #binding-cells = <2>;
             bindings = <&mo>, <&tog>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
     };
