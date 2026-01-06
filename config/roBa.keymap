@@ -87,6 +87,11 @@
             bindings = <&mkp MB1>;
             key-positions = <19 20>;
         };
+
+        tenkey {
+            bindings = <&tog 3>;
+            key-positions = <0 1 2>;
+        };
     };
 
     macros {
@@ -112,7 +117,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LANG";
             #binding-cells = <0>;
-            bindings = <&lt 1 LANGUAGE_2>, <&kp LANGUAGE_1>;
+            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
 
             tapping-term-ms = <200>;
         };
@@ -133,10 +138,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E         &kp R     &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 5 P
-&lt 2 A           &kp S             &kp D         &kp F     &kp G          &kp LS(LG(C_MUTE))      &kp HOME       &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &kp C         &kp V     &kp B          &kp PRINTSCREEN         &kp END        &kp N        &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
-&kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT  &td_lang  &lt_layer 3 3  &kp SPACE               &kp BACKSPACE  &lt 4 ENTER                             &lt 1 TILDE
+&kp Q             &kp W             &kp E         &kp R  &kp T                                            &kp Y        &kp U  &kp I      &kp O    &lt 5 P
+&lt 2 A           &kp S             &kp D         &kp F  &kp G     &kp LS(LG(C_MUTE))      &kp HOME       &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &kp C         &kp V  &kp B     &kp PRINTSCREEN         &kp END        &kp N        &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
+&kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT  &mo 1  &td_lang  &kp SPACE               &kp BACKSPACE  &lt 4 ENTER                             &lt 1 TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
