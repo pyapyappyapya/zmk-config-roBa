@@ -92,6 +92,11 @@
             bindings = <&tog 3>;
             key-positions = <0 1 2>;
         };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <40 28>;
+        };
     };
 
     macros {
